@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10130f">
+  <title>APEX // Formula Rush</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Apex Formula Rush home"><span class="mark">A</span><span>APEX<span class="dim"> / FORMULA RUSH</span></span></a>
+      <div class="top-right"><span class="season">WORLD SERIES · ROUND 01</span></div>
+    </header>
+
+    <section class="race-layout">
+      <aside class="race-info">
+        <p class="kicker"><span class="live-dot"></span> LIVE SESSION</p>
+        <h1>Coastal<br><em>Grand Prix</em></h1>
+        <div class="track-meta"><span>◉</span> MERIDIAN COAST <span class="meta-divider">/</span> 4.82 KM</div>
+        <div class="session-card">
+          <div class="session-head"><span>RACE CONTROL</span><span class="session-status" id="sessionStatus">READY</span></div>
+          <div class="session-row"><span>POSITION</span><strong id="positionValue">P4 <small>/ 4</small></strong></div>
+          <div class="session-row"><span>LAP</span><strong id="lapValue">— <small>/ 3</small></strong></div>
+          <div class="session-row"><span>BEST LAP</span><strong id="bestLap">--:--.---</strong></div>
+        </div>
+        <div class="track-map-wrap"><div class="map-caption">CIRCUIT MAP <span>01 / 07</span></div><canvas id="map" width="250" height="150" aria-label="Circuit minimap"></canvas></div>
+        <button class="restart-link" id="restartButton">↻ <span>RESTART SESSION</span></button>
+      </aside>
+
+      <section class="viewport" aria-label="Racing game">
+        <div class="race-hud">
+          <div class="speed"><div class="speed-label">SPEED <span>KM/H</span></div><strong id="speedValue">000</strong><div class="gear-row">GEAR <b id="gearValue">N</b><span class="boost-meter"><i id="boostBar"></i></span><span>ERS</span></div></div>
+          <div class="timer"><span>RACE TIME</span><strong id="raceTime">00:00.000</strong><div id="lapTime">LAP TIME&nbsp;&nbsp; --:--.---</div></div>
+        </div>
+        <canvas id="game" aria-label="Formula racing circuit"></canvas>
+        <div class="flag-message" id="flagMessage"><span class="flag-icon">◆</span><span id="flagText">PRESS ENTER TO START</span></div>
+        <div class="bottom-hud"><div class="track-progress"><span>START / FINISH</span><div class="progress-track"><i id="progressFill"></i></div><span id="progressValue">0%</span></div><div class="weather"><span class="sun">☼</span> 24°C <i></i> DRY</div></div>
+        <div class="mobile-controls" aria-label="Touch controls">
+          <div class="steer-controls"><button data-control="left" aria-label="Steer left">←</button><button data-control="right" aria-label="Steer right">→</button></div>
+          <div class="drive-controls"><button data-control="brake" aria-label="Brake">BRAKE</button><button data-control="gas" aria-label="Accelerate">GAS</button></div>
+        </div>
+        <div class="countdown" id="countdown" aria-live="polite"></div>
+        <div class="finish-overlay" id="finishOverlay"><div class="finish-panel"><p class="kicker">CHEQUERED FLAG</p><h2>RACE<br><em>COMPLETE</em></h2><div class="finish-stats"><span>FINISH POSITION</span><strong id="finishPosition">P4</strong><span>BEST LAP</span><strong id="finishBest">--:--.---</strong></div><button id="raceAgain">RACE AGAIN <span>↗</span></button></div></div>
+      </section>
+    </section>
+
+    <footer class="footer"><div class="controls"><span>CONTROLS</span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><small>DRIVE</small><kbd>SHIFT</kbd><small>BOOST</small><kbd>R</kbd><small>RESET</small></div><div class="footer-note">Apex Racing League <span>·</span> Built for the love of racing</div></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
+
